@@ -88,25 +88,27 @@ Blynk IoT Cloud
   ▼
 Mobile / Web Dashboard
 🔧 Hardware Components
-Component	Quantity	Purpose
-ESP32 Development Board	1	Main controller
-4-Channel Relay Module	1	Electrical load control
-LM35 Temperature Sensor	1	Temperature measurement
-LDR Sensor	1	Ambient light detection
-Wi-Fi Status LED	1	Wi-Fi connection indication
-AC Loads	As required	Home appliance control
-Power Supply	As required	System power
-Resistors	As required	Sensor/interface circuits
-Connecting Wires	As required	Hardware connections
+Component                    	Quantity                 	Purpose
+ESP32 Development Board	         1	                Main controller
+4-Channel Relay Module	         1	                Electrical load control
+LM35 Temperature Sensor	         1	                Temperature measurement
+LDR Sensor	                     1	                Ambient light detection
+Wi-Fi Status LED	               1	                Wi-Fi connection indication
+AC Loads	                  As required	            Home appliance control
+Power Supply	              As required	            System power
+Resistors	                  As required	            Sensor/interface circuits
+Connecting Wires	          As required	            Hardware connections
+
 📍 Pin Configuration
-Component	Function	ESP32 GPIO
-Relay 1	Load 1 Control	GPIO 15
-Relay 2	Load 2 Control	GPIO 13
-Relay 3	Load 3 Control	GPIO 14
-Relay 4	Load 4 Control	GPIO 27
-LM35	Analog Temperature Input	GPIO 36
-LDR	Analog Light Input	GPIO 39
-Wi-Fi LED	Status Indicator	GPIO 4
+Component	        Function	      ESP32 GPIO
+Relay 1	       Load 1 Control   	 GPIO 15
+Relay 2	       Load 2 Control	     GPIO 13
+Relay 3	       Load 3 Control	     GPIO 14
+Relay 4	       Load 4 Control	     GPIO 27
+LM35	    Analog Temperature Input GPIO 36
+LDR	         Analog Light Input	   GPIO 39
+LED	       Wifi Status Indicator	 GPIO 4
+
 GPIO Notes
 
 GPIO 36 and GPIO 39 are used as analog input pins.
@@ -195,17 +197,18 @@ Blynk Cloud
   ↓
 Blynk Dashboard
 📊 Blynk Virtual Pins
-Virtual Pin	Function	Direction
-V0	Relay 1 Control	Blynk → ESP32
-V1	Relay 2 Control	Blynk → ESP32
-V2	Relay 3 Control	Blynk → ESP32
-V3	Relay 4 Control	Blynk → ESP32
-V5	Temperature	ESP32 → Blynk
-V6	LDR Reading	ESP32 → Blynk
-V7	Relay 1 Status	ESP32 → Blynk
-V8	Relay 2 Status	ESP32 → Blynk
-V9	Relay 3 Status	ESP32 → Blynk
-V10	Relay 4 Status	ESP32 → Blynk
+Virtual Pin	   Function       	Direction
+V0	        Relay 1 Control   	Blynk → ESP32
+V1	        Relay 2 Control	    Blynk → ESP32
+V2	        Relay 3 Control	    Blynk → ESP32
+V3	        Relay 4 Control	    Blynk → ESP32
+V5	          Temperature	      ESP32 → Blynk
+V6	          LDR Reading	      ESP32 → Blynk
+V7	        Relay 1 Status	    ESP32 → Blynk
+V8	        Relay 2 Status	    ESP32 → Blynk
+V9	        Relay 3 Status	    ESP32 → Blynk
+V10	        Relay 4 Status	    ESP32 → Blynk
+
 🎛️ Blynk Dashboard
 
 Recommended widgets:
@@ -222,6 +225,7 @@ Relay 1 LED → V7
 Relay 2 LED → V8
 Relay 3 LED → V9
 Relay 4 LED → V10
+
 🌐 Operating Modes
 Online Mode
 
@@ -293,6 +297,7 @@ Update Blynk
    │
    ▼
 Continue Monitoring
+
 🛡️ Relay Flicker Prevention
 
 The project implements a relay state-checking mechanism to prevent unnecessary relay switching.
@@ -434,22 +439,23 @@ If required, the conversion can be adjusted according to the actual ESP32 ADC ch
 
 Recommended test cases:
 
-Test	Expected Result
-Power ON	ESP32 starts successfully
-Wi-Fi connected	Wi-Fi LED ON
-Wi-Fi disconnected	Wi-Fi LED OFF
-Relay 1 ON	Load 1 activates
-Relay 1 OFF	Load 1 deactivates
-Relay 2 ON	Load 2 activates
-Relay 2 OFF	Load 2 deactivates
-Relay 3 ON	Load 3 activates
-Relay 3 OFF	Load 3 deactivates
-Relay 4 ON	Load 4 activates
-Bright environment	Relay 2 OFF in offline mode
-Dark environment	Relay 2 ON in offline mode
+Test	                Expected Result
+Power ON	            ESP32 starts successfully
+Wi-Fi connected	      Wi-Fi LED ON
+Wi-Fi disconnected	  Wi-Fi LED OFF
+Relay 1 ON	          Load 1 activates
+Relay 1 OFF	          Load 1 deactivates
+Relay 2 ON	          Load 2 activates
+Relay 2 OFF	          Load 2 deactivates
+Relay 3 ON	          Load 3 activates
+Relay 3 OFF	          Load 3 deactivates
+Relay 4 ON	          Load 4 activates
+Bright environment	  Relay 2 OFF in offline mode
+Dark environment	    Relay 2 ON in offline mode
 Temperature measurement	Temperature displayed in Blynk
-LDR measurement	LDR value displayed in Blynk
-Wi-Fi failure	Offline automation continues
+LDR measurement	      LDR value displayed in Blynk
+Wi-Fi failure	        Offline automation continues
+
 ⚠️ Safety Precautions
 
 This project can be used to control AC electrical loads through a relay module.
@@ -526,17 +532,3 @@ See the LICENSE file for details.
 
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
 
-
-### ⚠️ Important security issue before you upload
-
-I inspected your `.ino` file, and it currently contains your **actual Blynk Auth Token and Wi-Fi credentials**. Do **not** upload that version to a public GitHub repository.
-
-Before uploading, change them to:
-
-```cpp
-#define BLYNK_TEMPLATE_ID "YOUR_TEMPLATE_ID"
-#define BLYNK_TEMPLATE_NAME "YOUR_TEMPLATE_NAME"
-#define BLYNK_AUTH_TOKEN "YOUR_AUTH_TOKEN"
-
-const char* WIFI_SSID = "YOUR_WIFI_NAME";
-const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
