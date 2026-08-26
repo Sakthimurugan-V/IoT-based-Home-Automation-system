@@ -100,14 +100,14 @@ Resistors	                  As required	            Sensor/interface circuits
 Connecting Wires	          As required	            Hardware connections
 
 📍 Pin Configuration
-Component	        Function	      ESP32 GPIO
-Relay 1	       Load 1 Control   	 GPIO 15
-Relay 2	       Load 2 Control	     GPIO 13
-Relay 3	       Load 3 Control	     GPIO 14
-Relay 4	       Load 4 Control	     GPIO 27
-LM35	    Analog Temperature Input GPIO 36
-LDR	         Analog Light Input	   GPIO 39
-LED	       Wifi Status Indicator	 GPIO 4
+Component	        Function	          ESP32 GPIO
+Relay 1	       Load 1 Control        	 GPIO 15
+Relay 2	       Load 2 Control	         GPIO 13
+Relay 3	       Load 3 Control	         GPIO 14
+Relay 4	       Load 4 Control	         GPIO 27
+LM35	    Analog Temperature Input     GPIO 36
+LDR	         Analog Light Input	       GPIO 39
+LED	       Wifi Status Indicator	     GPIO 4
 
 GPIO Notes
 
@@ -218,6 +218,7 @@ Relay 1 Button → V0
 Relay 2 Button → V1
 Relay 3 Button → V2
 Relay 4 Button → V3
+
 Monitoring Widgets
 Temperature Gauge → V5
 LDR Gauge → V6
@@ -491,22 +492,7 @@ Automatic appliance scheduling
 Web-based monitoring
 Real-time power consumption analytics
 Improved offline automation logic
-📖 Documentation
 
-The complete project manual can include:
-
-Project Introduction
-System Architecture
-Hardware Description
-Circuit Diagram
-Pin Configuration
-Wiring
-Software Requirements
-Blynk Configuration
-Operating Modes
-Testing and Results
-Troubleshooting
-Safety Instructions
 👨‍💻 Author
 
 Sakthimurugan V
