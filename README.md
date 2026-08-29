@@ -106,9 +106,9 @@ Relay 1	       Load 1 Control        	 GPIO 15
 Relay 2	       Load 2 Control	         GPIO 13
 Relay 3	       Load 3 Control	         GPIO 14
 Relay 4	       Load 4 Control	         GPIO 27
-LM35	    Analog Temperature Input     GPIO 36
+LM35	   Analog Temperature Input      GPIO 36
 LDR	         Analog Light Input	         GPIO 39
-LED	       Wifi Status Indicator	     GPIO 4
+LED	        Wifi Status Indicator	     GPIO 4
 
 GPIO Notes
 
