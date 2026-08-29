@@ -87,6 +87,7 @@ Blynk IoT Cloud
   │
   ▼
 Mobile / Web Dashboard
+
 🔧 Hardware Components
 Component                    	Quantity                 	Purpose
 ESP32 Development Board	         1	                Main controller
