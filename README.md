@@ -94,7 +94,7 @@ ESP32 Development Board	         1	                Main controller
 4-Channel Relay Module	         1	                Electrical load control
 LM35 Temperature Sensor	         1	                Temperature measurement
 LDR Sensor	                     1	                Ambient light detection
-Wi-Fi Status LED	              1	                Wi-Fi connection indication
+Wi-Fi Status LED	             1	                Wi-Fi connection indication
 AC Loads	                As required	            Home appliance control
 Power Supply	            As required	            System power
 Resistors	                As required	            Sensor/interface circuits
@@ -107,7 +107,7 @@ Relay 2	       Load 2 Control	         GPIO 13
 Relay 3	       Load 3 Control	         GPIO 14
 Relay 4	       Load 4 Control	         GPIO 27
 LM35	    Analog Temperature Input     GPIO 36
-LDR	         Analog Light Input	        GPIO 39
+LDR	         Analog Light Input	         GPIO 39
 LED	       Wifi Status Indicator	     GPIO 4
 
 GPIO Notes
